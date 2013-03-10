@@ -1,0 +1,29 @@
+/* wlpressdb sample css, rev. 2012-02-25 */
+
+body, p { font: 10pt Arial, Helvetica; color: black; }
+
+.tbl1 td { padding: 8px 5px; margin: 0px; vertical-align: top; }
+.tbl1 a { text-decoration: none; color: #0000A0;}
+.tbl1 a:hover { text-decoration: underline; }
+
+input[type=text], textarea { width:600px; }
+input[type=text], textarea, select { border: 1px solid #CCCCCC; padding: 2px 0px 2px 5px; 
+}textarea, select { height: 80px; }
+textarea { resize: none; }
+select { width:608px; }
+
+.logout_box { position: absolute; top: 8px; right: 10px; font: 9pt Arial, Helvetica; color: black; }
+.logout_box form { display:inline; }
+.logout_box b { color: #404040; }
+.logout_box a {
+	padding: 2px 10px 3px 10px; margin-left: 10px; font-size: 8pt; 
+	color: white; background-color: #6B6B9F; text-decoration: none;	
+}
+.logout_box a:hover { background-color: #4040C8; }
+
+#loading { 
+	position:absolute; top: 60px; left: 60px; width: 220px; height: 220px;
+	background-image: url('loading.gif'); background-color: #FFFFFF;
+	cursor: wait;
+}
+

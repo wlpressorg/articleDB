@@ -1,0 +1,71 @@
+wlpressdb
+=========
+The "whole package" consists of the article parser, the database and 
+the Firefox Add-On, as well as some "surrounding" php to interconnect 
+and embed the components.
+
+The database is "a tick" more complex than the current one, comprising 
+fifteen tables now instead of one. (See wlpressdb_erd.pdf for a model 
+overview.) Without a doubt it requires a lot of work to implement and 
+operate the new database, and also the continually workload might be 
+higher than before. Therefore, you get a professional "future-proof" 
+database which enables virtually any kind of search or filter operations,
+allows to exchange normalized data with other databases and leaves room 
+for future developments.
+
+
+What's in the box?
+==================
+With the database you get a complete set of geoscheme data, allowing to 
+assign countries, regions and languages easily. The data are base on 
+established standards for best compatibility.
+
+As a "starter set" I've included the data of 160 media organizations 
+from cabledrum database. This includes all media partners of WikiLeaks 
+and approx. 50 others. (Of course, these data are by far not complete. 
+There are thousands of organizations missing. It might be a task of 
+years to complete the data step by step.)
+
+wlpressdb comes with a handsome session controller in order to manage 
+access of privileged system users for administrative tasks. (See below 
+and session_controller_README.txt)
+
+
+What's missing
+==============
+Parser and database do their jobs in background without visible output. 
+First of all, a frontend is needed to show and process the submission 
+form. Also a browser and/or a search engine is required to visualize the 
+data.
+
+Beside the frontend, there are several administrative tasks that require 
+privileged access, e.g.:
+- confirming new data submissions
+- editing article data
+- adding/editing media organizations
+- adding/editing tags/keywords
+- blacklist users or domains
+
+Basically, all these tasks can be done directly on the database console 
+but this isn't convenient and requires some sql skills. Depending on 
+your demands part of these tasks should be mapped to frontend pages with 
+restricted access, especially confirming/editing of article data. The 
+session controller can be used to manage access on it.
+
+
+How to organize the further development?
+========================================
+My part is done more or less in my eyes. The frontend is up to you. 
+I would suggest that the database development remains on my desk. For 
+the frontend embedding I can write all required SQL statements for you. 
+(This is a suggestion only, of course, it's your database now.)
+
+
+Future steps
+============
+When you're ready so far, I can share my article data (approx. 1,200 
+cablegate related articles) with you. Somewhat later (let's say: this 
+summer) I could rewrite the spider that I used for cablegate, to fetch 
+WL related articles from certain MSM automatically.
+
+

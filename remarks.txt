@@ -1,0 +1,46 @@
+The article parser operates in 3 stages:
+1. Webget - fetches the article page 
+2. Parser - extracts meta tags and content elements
+3. Interpreter - refines the article properties
+
+Features:
+- Webget
+  > follows HTTP redirects automatically, even handles short links 
+    (e.g. from Twitter)
+  > supports SSL, chunked transfers and gzip encoding
+  > exception handling for invalid URLs, timeouts, HTTP status errors
+
+- Parser
+  > raw extraction from DOM model
+  > handles virtually any character encoding, converts to UTF8
+  > extracts meta keywords
+
+- Interpreter
+  > best case match for title, publication date, keywords etc.
+  > tries to optimize the title, e.g. "foo corge bar" instead of
+    "foo corge bar | World news | The Guardian"
+
+Safety precautions/Spam protection
+- IP blacklist
+- domain blacklist (to exclude unwanted article sources)
+
+
+Firefox Add-On
+==============
+The Add-On is quite simple but serves its purpose. The installer adds a 
+button to the address bar. A click on this button opens the submission 
+form on a new tab and submits the current url to it.
+
+The button gets disabled on non-http pages (local pages, ftp etc.) and 
+also within the domain wikileaks-press.org (since it makes no sense to 
+submit your own pages to your database). This also means that the button 
+is disabled on the submission page itself (which is currently not the 
+case since the test page is outside your domain).
+
+The Add-On comes without installer dialogue, welcome page, preferences 
+dialogue, context menu items or any other flashy details. If you miss 
+something, feel free to add it. Please keep in mind that add-ons often 
+have lots of compatibility issues. The more features you add the higher 
+is the risk to get in trouble. Thus, I recommend to keep the add-on as 
+simple as possible.
+
